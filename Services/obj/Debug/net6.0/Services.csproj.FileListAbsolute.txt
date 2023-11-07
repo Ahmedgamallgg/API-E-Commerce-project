@@ -1,0 +1,17 @@
+E:\Back-End\Web Api\Project\E-Commerce\Services\bin\Debug\net6.0\Services.deps.json
+E:\Back-End\Web Api\Project\E-Commerce\Services\bin\Debug\net6.0\Services.dll
+E:\Back-End\Web Api\Project\E-Commerce\Services\bin\Debug\net6.0\Services.pdb
+E:\Back-End\Web Api\Project\E-Commerce\Services\bin\Debug\net6.0\Core.dll
+E:\Back-End\Web Api\Project\E-Commerce\Services\bin\Debug\net6.0\Infrastructure.dll
+E:\Back-End\Web Api\Project\E-Commerce\Services\bin\Debug\net6.0\Infrastructure.pdb
+E:\Back-End\Web Api\Project\E-Commerce\Services\bin\Debug\net6.0\Core.pdb
+E:\Back-End\Web Api\Project\E-Commerce\Services\obj\Debug\net6.0\Services.csproj.AssemblyReference.cache
+E:\Back-End\Web Api\Project\E-Commerce\Services\obj\Debug\net6.0\Services.GeneratedMSBuildEditorConfig.editorconfig
+E:\Back-End\Web Api\Project\E-Commerce\Services\obj\Debug\net6.0\Services.AssemblyInfoInputs.cache
+E:\Back-End\Web Api\Project\E-Commerce\Services\obj\Debug\net6.0\Services.AssemblyInfo.cs
+E:\Back-End\Web Api\Project\E-Commerce\Services\obj\Debug\net6.0\Services.csproj.CoreCompileInputs.cache
+E:\Back-End\Web Api\Project\E-Commerce\Services\obj\Debug\net6.0\Services.csproj.CopyComplete
+E:\Back-End\Web Api\Project\E-Commerce\Services\obj\Debug\net6.0\Services.dll
+E:\Back-End\Web Api\Project\E-Commerce\Services\obj\Debug\net6.0\refint\Services.dll
+E:\Back-End\Web Api\Project\E-Commerce\Services\obj\Debug\net6.0\Services.pdb
+E:\Back-End\Web Api\Project\E-Commerce\Services\obj\Debug\net6.0\ref\Services.dll
