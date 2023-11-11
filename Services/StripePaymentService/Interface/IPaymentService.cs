@@ -11,8 +11,10 @@ namespace Services.StripePaymentService.Interface
     public interface IPaymentService
     {
         Task<CustomerBasketDto> CreateOrUpdatePaymentIntent(string basketId);
+        Task<CustomerBasketDto> CreateOrUpdatePaymentIntent(CustomerBasketDto basket);
 
-        Task<OrderResultDto> UpdateOrderPaymentSecceeded(string paymentIntentId);
+
+        Task<OrderResultDto> UpdateOrderPaymentSecceeded(string paymentIntentId, string basketId);
 
         Task<OrderResultDto> UpdateOrderPaymentFailed(string paymentIntentId);
     }

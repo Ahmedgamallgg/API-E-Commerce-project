@@ -21,14 +21,24 @@ namespace E_Commerce.Controllers
             _PaymentService = paymentService;
             _Logger = logger;
         }
-        [HttpPost("{basketId}")]
-        public async Task<ActionResult<CustomerBasketDto>> CreateOrUpdatePaymentIntent(string basketId)
+        [HttpPost("{basket}")]
+        public async Task<ActionResult<CustomerBasketDto>> CreateOrUpdatePaymentIntentForExistingOrder(CustomerBasketDto basket)
         {
-            var basket = await _PaymentService.CreateOrUpdatePaymentIntent(basketId);
-            if (basket == null)
+            var customerBasket = await _PaymentService.CreateOrUpdatePaymentIntent(basket);
+            if (customerBasket == null)
                 return BadRequest(new ApiResponse(400, "Problem With Your Basket"));
 
-            return Ok(basket);
+            return Ok(customerBasket);
+        }
+
+        [HttpPost("{basketId}")]
+        public async Task<ActionResult<CustomerBasketDto>> CreateOrUpdatePaymentIntentForNewOrder(string basketId)
+        {
+            var customerBasket = await _PaymentService.CreateOrUpdatePaymentIntent(basketId);
+            if (customerBasket == null)
+                return BadRequest(new ApiResponse(400, "Problem With Your Basket"));
+
+            return Ok(customerBasket);
         }
 
         [HttpPost]

@@ -53,12 +53,15 @@ namespace Services.OrderService.Services
 
             var existingOrder = await _UnitOfWork.Reposatory<Order>().GetEntityWithSpecificationsAsync(specs);
 
+            CustomerBasketDto customerBasket = new CustomerBasketDto();
+
             if(existingOrder != null)
             {
                 _UnitOfWork.Reposatory<Order>().Delete(existingOrder);
-                await _PaymentService.CreateOrUpdatePaymentIntent(basket.PaymentIntentId);
+                await _PaymentService.CreateOrUpdatePaymentIntent(basket);
             }
-
+            else
+                customerBasket  = await _PaymentService.CreateOrUpdatePaymentIntent(basket.Id);
 
             // create order
 
@@ -66,7 +69,9 @@ namespace Services.OrderService.Services
 
             var mappedShippingAddress = _Mapper.Map<ShippingAddress>(orderDto.ShippingAddress);
 
-            var order = new Order(orderDto.BuyerEmail, mappedShippingAddress, deliveryMethod, mappedOrderItems, subTotal, basket.PaymentIntentId);
+
+
+            var order = new Order(orderDto.BuyerEmail, mappedShippingAddress, deliveryMethod, mappedOrderItems, subTotal, basket.PaymentIntentId ?? customerBasket.PaymentIntentId);
 
             await _UnitOfWork.Reposatory<Order>().Add(order);
 

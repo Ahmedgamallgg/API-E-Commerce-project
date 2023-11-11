@@ -24,7 +24,7 @@ namespace E_Commerce.Controllers
             
         }
         [HttpPost]
-        public async Task<ActionResult<CustomerBasketDto>> UpdateBasket(CustomerBasketDto Basket)
+        public async Task<ActionResult<CustomerBasketDto>> CreateOrUpdateBasket(CustomerBasketDto Basket)
         {
             var basket = await _BasketService.UpdateCustomerBasket(Basket);
             if (basket == null)

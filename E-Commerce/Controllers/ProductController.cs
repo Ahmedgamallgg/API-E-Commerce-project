@@ -36,7 +36,7 @@ namespace E_Commerce.Controllers
             => Ok(await _ProductService.GetAllProductBrandsAsync());
         [HttpGet]
 
-        public async Task<ActionResult<IReadOnlyList<ProductType>>> GetProductTypess()
+        public async Task<ActionResult<IReadOnlyList<ProductType>>> GetProductTypes()
             => Ok(await _ProductService.GetAllProductTypesAsync());
         [HttpGet]
         [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status404NotFound)]

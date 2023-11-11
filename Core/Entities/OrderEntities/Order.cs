@@ -21,7 +21,7 @@ namespace Core.Entities.OrderEntities
             
         }
 
-        public Order(string buyerEmail, ShippingAddress shippingAddress, Delivery deliveryMethod, IReadOnlyList<OrderItem> orderItems, decimal subTotal, string paymentIntentId)
+        public Order(string buyerEmail, ShippingAddress shippingAddress, Delivery deliveryMethod, IReadOnlyList<OrderItem> orderItems, decimal subTotal, string? paymentIntentId)
         {
             BuyerEmail = buyerEmail;
             ShippingAddress = shippingAddress;
